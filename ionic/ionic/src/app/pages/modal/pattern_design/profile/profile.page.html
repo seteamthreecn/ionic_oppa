@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="closeModal()">
+      <ion-button color="primary" (click)="closeModal()">
+        <ion-icon name="close" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <h6 style="text-align: center;">PROFILE</h6>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="align-items: center;" text-center>
+    <ion-avatar slot="start" class="user-avatar image-center">
+      <img src="http://localhost:83/{{imgURL}}" >
+    </ion-avatar>
+  </div>
+  <br />
+
+  <ion-label>
+    <ion-row>
+      <ion-col style="text-align: center; color: black;"
+        ><b>ชื่อ : </b>{{user_fname}}</ion-col
+      >
+    </ion-row>
+  </ion-label>
+  <br />
+  <ion-label>
+    <ion-row>
+      <ion-col style="text-align: center; color: black;"
+        ><b>นามสกุล : </b>{{user_lname}}</ion-col
+      >
+    </ion-row>
+  </ion-label>
+  <br />
+  <ion-label>
+    <ion-row>
+      <ion-col style="text-align: center; color: black;"
+        ><b>ชื่อผู้ใช้งาน : </b>{{user_username}}</ion-col
+      >
+    </ion-row>
+  </ion-label>
+  <br />
+  <ion-label>
+    <ion-row>
+      <ion-col style="text-align: center; color: black;"
+        ><b>อีเมล : </b>{{user_email}}</ion-col
+      >
+    </ion-row>
+  </ion-label>
+
+  <br /><br />
+  <ion-button expand="full" color="secondary" (click)="edit_profile()"
+    >แก้ไข</ion-button
+  >
+</ion-content>
